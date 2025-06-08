@@ -103,12 +103,14 @@ class mexpress {
     double _valor = 0.00;
     String _status='';
     String _data='';
+
     int get id => _id;
     int get idreserva => _idreserva;
     String get metodopag => _metodopag;
     double get valor => _valor;
     String get status => _status;
     String get data => _data;
+
     set id(int id) => this._id = id;
     set idreserva(int idreserva) => this._idreserva = idreserva;
     set metodopag(String metodopag) => this._metodopag = metodopag;
@@ -124,6 +126,7 @@ class mexpress {
     String _lida = '';
     String _via = '';
     String _data = '';
+
     int get id => _id;
     int get idcliente => _idcliente;
     String get titulo => _titulo;
@@ -131,6 +134,7 @@ class mexpress {
     String get lida => _lida;
     String get via => _via;
     String get data => _data;
+    
     set id(int id) => this._id = id;
     set idcliente(int idcliente) => this._idcliente = idcliente;
     set titulo(String titulo) => this._titulo = titulo;
@@ -148,6 +152,7 @@ class mexpress {
     String _tipo = '';
     String _caminhoarquivo = '';
     String _datageracao = '';
+
     int get id => _id;
     String get areaafim => _areaafim;
     String get nomearquivo => _nomearquivo;
@@ -155,6 +160,7 @@ class mexpress {
     String get tipo => _tipo;
     String get caminhoarquivo => _caminhoarquivo;
     String get datageracao  => _datageracao;
+
     set id(int id) => this._id = id;
     set areaafim(String areaafim) => this._areaafim = areaafim;
     set nomearquivo(String nomearquivo) => this._nomearquivo = nomearquivo;
@@ -171,6 +177,7 @@ class mexpress {
     int get id => _id;
     int get idcriador => _idcriador;
     int get iddestinatario => _iddestinatario;
+
     set id(int id) => this._id = id;
     set idcriador(int idcriador) => this._idcriador = idcriador;
     set iddestinatario(int iddestinatario) => this._iddestinatario = iddestinatario;
@@ -183,12 +190,14 @@ class mexpress {
     String _entregadorassinou='';
     String _dataassinaturas='';
     String _caminhoarquivosfotos='';
+
     int get id => _id;
     int get idreserva => _idreserva;
     String get clienteassinou  => _clienteassinou;
     String get entregadorassinou  => _entregadorassinou;
     String get dataassinaturas  => _dataassinaturas;
     String get caminhoarquivosfotos  => _caminhoarquivosfotos;
+
     set id(int id) => this._id = id;
     set idreserva(int idreserva) => this._idreserva = idreserva;
     set clienteassinou(String clienteassinou) => this._clienteassinou = clienteassinou;
@@ -210,9 +219,9 @@ class mexpress {
 
   class usuarios extends mexpress{
     int _id = 0;
-    String tipo = '';
+    String _tipo = '';
     void tipo_user(){
-        print("Tipo de usuario: Cliente");
+        print("Tipo de usuario: $_tipo");
     }
   }
   class usuario_suporte extends mexpress{
@@ -248,7 +257,7 @@ void main(){
   print("hello word");
   var test = feedbacks();
   test.avaliacao();
-
+  /** 
   var pagamentos = Pagamento();
   pagamentos.id = 3472;
   pagamentos.idreserva = 36;
@@ -287,6 +296,7 @@ void main(){
   relatorio.tipo = 'PDF';
   relatorio.caminhoarquivo = 'pasta MErella';
   relatorio.datageracao = '12/12/2017';
+
   print(relatorio.id);
   print(relatorio.areaafim);
   print(relatorio.nomearquivo);
@@ -315,5 +325,5 @@ void main(){
   print(assinatura.clienteassinou);
   print(assinatura.entregadorassinou);
   print(assinatura.dataassinaturas);
-  print(assinatura.caminhoarquivosfotos);
+  print(assinatura.caminhoarquivosfotos);*/
 }

@@ -1,0 +1,179 @@
+class Pagamento{
+  int _id = 0;
+  int _idreserva = 0;
+  String _metodopag = '';
+  double _valor = 0.00;
+  String _status='';
+  String _data='';
+
+  int get id => _id;
+  int get idreserva => _idreserva;
+  String get metodopag => _metodopag;
+  double get valor => _valor;
+  String get status => _status;
+  String get data => _data;
+
+  set id(int id) => this._id = id;
+  set idreserva(int idreserva) => this._idreserva = idreserva;
+  set metodopag(String metodopag) => this._metodopag = metodopag;
+  set valor(double valor) => this._valor = valor;
+  set status(String status) => this._status = status;
+  set data(String data) => this._data = data;
+}
+class Notificacoes{
+  int _id = 0;
+  int _idcliente = 0;
+  String _titulo = '';
+  String _mensagem = '';
+  String _lida = '';
+  String _via = '';
+  String _data = '';
+
+  int get id => _id;
+  int get idcliente => _idcliente;
+  String get titulo => _titulo;
+  String get mensagem => _mensagem;
+  String get lida => _lida;
+  String get via => _via;
+  String get data => _data;
+
+  set id(int id) => this._id = id;
+  set idcliente(int idcliente) => this._idcliente = idcliente;
+  set titulo(String titulo) => this._titulo = titulo;
+  set mensagem(String mensagem) => this._mensagem = mensagem;
+  set lida(String lida) => this._lida = lida;
+  set via(String via) => this._via = via;
+  set data(String data) => this._data = data;
+
+}
+class Relatorios{
+  int _id = 0;
+  String _areaafim = '';
+  String _nomearquivo = '';
+  String _brevedescricao = '';
+  String _tipo = '';
+  String _caminhoarquivo = '';
+  String _datageracao = '';
+
+  int get id => _id;
+  String get areaafim => _areaafim;
+  String get nomearquivo => _nomearquivo;
+  String get brevedescricao => _brevedescricao;
+  String get tipo => _tipo;
+  String get caminhoarquivo => _caminhoarquivo;
+  String get datageracao  => _datageracao;
+
+  set id(int id) => this._id = id;
+  set areaafim(String areaafim) => this._areaafim = areaafim;
+  set nomearquivo(String nomearquivo) => this._nomearquivo = nomearquivo;
+  set brevedescricao(String brevedescricao) => this._brevedescricao = brevedescricao;
+  set tipo(String tipo) => this._tipo = tipo;
+  set caminhoarquivo(String caminhoarquivo) => this._caminhoarquivo = caminhoarquivo;
+  set datageracao(String datageracao) => this._datageracao = datageracao;
+  
+}
+class Documentos{
+  int _id=0;
+  int _idcriador=0;
+  int _iddestinatario=0;
+  int get id => _id;
+  int get idcriador => _idcriador;
+  int get iddestinatario => _iddestinatario;
+
+  set id(int id) => this._id = id;
+  set idcriador(int idcriador) => this._idcriador = idcriador;
+  set iddestinatario(int iddestinatario) => this._iddestinatario = iddestinatario;
+  
+}
+class Assinaturas{
+  int _id=0;
+  int _idreserva=0;
+  String _clienteassinou='';
+  String _entregadorassinou='';
+  String _dataassinaturas='';
+  String _caminhoarquivosfotos='';
+
+  int get id => _id;
+  int get idreserva => _idreserva;
+  String get clienteassinou  => _clienteassinou;
+  String get entregadorassinou  => _entregadorassinou;
+  String get dataassinaturas  => _dataassinaturas;
+  String get caminhoarquivosfotos  => _caminhoarquivosfotos;
+  
+  set id(int id) => this._id = id;
+  set idreserva(int idreserva) => this._idreserva = idreserva;
+  set clienteassinou(String clienteassinou) => this._clienteassinou = clienteassinou;
+  set entregadorassinou(String entregadorassinou) => this._entregadorassinou = entregadorassinou;
+  set dataassinaturas(String dataassinaturas) => this._dataassinaturas = dataassinaturas;
+  set caminhoarquivosfotos(String caminhoarquivosfotos) => this._caminhoarquivosfotos = caminhoarquivosfotos;
+
+}
+void main(){
+  var pagamentos = Pagamento();
+  pagamentos.id = 3472;
+  pagamentos.idreserva = 36;
+  pagamentos.metodopag = 'Pix';
+  pagamentos.valor = 108.00;
+  pagamentos.status = 'Pago';
+  pagamentos.data = '07/10/2024';
+  print(pagamentos.id);
+  print(pagamentos.idreserva);
+  print(pagamentos.metodopag);
+  print(pagamentos.valor);
+  print(pagamentos.status);
+  print(pagamentos.data);
+  
+  var notificacao = Notificacoes();
+  notificacao.id = 114;
+  notificacao.idcliente = 252;
+  notificacao.titulo = 'novidades!!!';
+  notificacao.mensagem = 'Venha conferir essa supresa moto de alto nivel na black friday';
+  notificacao.lida = 'Não';
+  notificacao.via = 'SMS';
+  notificacao.data = '25/02/2021';
+  print(notificacao.id);
+  print(notificacao.idcliente);
+  print(notificacao.titulo);
+  print(notificacao.mensagem);
+  print(notificacao.lida);
+  print(notificacao.via);
+  print(notificacao.data);
+  
+  var relatorio = Relatorios();
+  relatorio.id = 18932;
+  relatorio.areaafim = 'estoque';
+  relatorio.nomearquivo = 'arquivosuplementos';
+  relatorio.brevedescricao = 'ta tudo ok';
+  relatorio.tipo = 'PDF';
+  relatorio.caminhoarquivo = 'pasta MErella';
+  relatorio.datageracao = '12/12/2017';
+  print(relatorio.id);
+  print(relatorio.areaafim);
+  print(relatorio.nomearquivo);
+  print(relatorio.brevedescricao);
+  print(relatorio.tipo);
+  print(relatorio.caminhoarquivo);
+  print(relatorio.datageracao);
+  
+  var documento = Documentos();
+  documento.id = 1123;
+  documento.idcriador = 13231;
+  documento.iddestinatario = 29392;
+  print(documento.id);
+  print(documento.idcriador);
+  print(documento.iddestinatario);
+  
+  var assinatura = Assinaturas();
+  assinatura.id = 1212;
+  assinatura.idreserva = 1983481;
+  assinatura.clienteassinou = 'Sim';
+  assinatura.entregadorassinou = 'Sim';
+  assinatura.dataassinaturas = '20/03/2015';
+  assinatura.caminhoarquivosfotos = 'JPEG1121413143';
+  print(assinatura.id);
+  print(assinatura.idreserva);
+  print(assinatura.clienteassinou);
+  print(assinatura.entregadorassinou);
+  print(assinatura.dataassinaturas);
+  print(assinatura.caminhoarquivosfotos);
+}

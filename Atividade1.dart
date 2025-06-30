@@ -257,7 +257,6 @@ void main(){
   print("hello word");
   var test = feedbacks();
   test.avaliacao();
-  /** 
   var pagamentos = Pagamento();
   pagamentos.id = 3472;
   pagamentos.idreserva = 36;
@@ -325,5 +324,5 @@ void main(){
   print(assinatura.clienteassinou);
   print(assinatura.entregadorassinou);
   print(assinatura.dataassinaturas);
-  print(assinatura.caminhoarquivosfotos);*/
+  print(assinatura.caminhoarquivosfotos);
 }
